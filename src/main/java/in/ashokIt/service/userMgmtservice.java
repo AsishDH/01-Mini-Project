@@ -7,23 +7,21 @@ import in.ashokIt.binding.SignUp;
 import in.ashokIt.binding.UnlockAccForm;
 
 public interface userMgmtservice {
-	
-	
 
-    Map<Integer, String> getCountries();
+	public String login(SignIn form);
 
-    Map<Integer, String> getStates(Integer countryId);
+	public String isEmailUnique(String email);
 
-    Map<Integer, String> getCities(Integer stateId);
+	public Map<Integer, String> getCountries();
 
-    String registerUser(SignUp form);
+	public Map<Integer, String> getStates(Integer countryId);
 
-    boolean unlockAccount(UnlockAccForm form);
+	public Map<Integer, String> getCities(Integer stateId);
 
-    String login(SignIn form);
+	public String registerUser(SignUp form);
 
-    String forgotPwd(String email);
+	public boolean unlockAccount(UnlockAccForm form);
 
-    boolean isEmailUnique(String email);
+	public String forgotPwd(String email);
 
 }
